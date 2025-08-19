@@ -10,7 +10,7 @@ provider "aws" {
 region = "us-east-1"
 }
 
-resource "aws_security_group" "my_server1" {
+resource "aws_security_group" "my_server12" {
 name = "myserver-sg"
 description = "tcp port config"
 ingress {
@@ -29,10 +29,10 @@ cidr_blocks = ["0.0.0.0/0"]
 }
 }
 
-resource "aws_instance" "pipline-ec2" {
+resource "aws_instance" "pipline-ec22" {
 ami = "ami-020cba7c55df1f615"
 instance_type = "t3.medium"
-vpc_security_group_ids = [aws_security_group.my_server1.id]
+vpc_security_group_ids = [aws_security_group.my_server12.id]
 key_name = "key"
 }
 
