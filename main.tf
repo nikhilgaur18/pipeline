@@ -1,3 +1,18 @@
+terraform {
+  backend "s3" {
+    bucket = "websitebucket-niks"   # <-- your existing bucket
+    key    = "terraform/jenkins.tfstate"
+    region = "us-east-1"
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 provider "aws" {
 region = "us-east-1"
 }
