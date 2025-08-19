@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-         AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+         AWS_ACCESS_KEY_ID     = credentials('aws-creds')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-creds')
         AWS_DEFAULT_REGION    = 'us-east-1'
         TF_DIR                = 'pipeline'   // path inside repo where main.tf is stored
     }
