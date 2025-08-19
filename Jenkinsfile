@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-         AWS_ACCESS_KEY_ID     = credentials('AKIAZSLGDBTSYAYZX4AZ')   // stored in Jenkins
-        AWS_SECRET_ACCESS_KEY = credentials('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') 
+         AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
         AWS_DEFAULT_REGION    = 'us-east-1'
         TF_DIR                = 'pipeline'   // path inside repo where main.tf is stored
     }
