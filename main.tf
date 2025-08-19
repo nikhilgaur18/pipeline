@@ -10,8 +10,8 @@ provider "aws" {
 region = "us-east-1"
 }
 
-resource "aws_security_group" "my_server12" {
-name = "myserver-sg"
+resource "aws_security_group" "my_server13" {
+name = "myserver-sg1"
 description = "tcp port config"
 ingress {
 description = "all incoming traffic"
@@ -29,13 +29,13 @@ cidr_blocks = ["0.0.0.0/0"]
 }
 }
 
-resource "aws_instance" "pipline-ec22" {
+resource "aws_instance" "pipline-ec23" {
 ami = "ami-020cba7c55df1f615"
 instance_type = "t3.medium"
-vpc_security_group_ids = [aws_security_group.my_server12.id]
+vpc_security_group_ids = [aws_security_group.my_server13.id]
 key_name = "key"
 }
 
 output "ec2_public_ip" {
-value = aws_instance.pipline-ec22.public_ip
+value = aws_instance.pipline-ec23.public_ip
 }
