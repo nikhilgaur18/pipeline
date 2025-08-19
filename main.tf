@@ -25,7 +25,7 @@ resource "aws_instance" "pipline-ec2" {
 ami = "ami-020cba7c55df1f615"
 instance_type = "t3.medium"
 vpc_security_group_ids = [aws_security_group.my_server1.id]
-key_name = "key.pam"
+key_name = "key"
 }
 
 output "ec2_public_ip" {
