@@ -37,5 +37,5 @@ key_name = "key"
 }
 
 output "ec2_public_ip" {
-value = aws_instance.pipline-ec2.public_ip
+value = aws_instance.pipline-ec22.public_ip
 }
