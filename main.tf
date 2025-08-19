@@ -22,7 +22,7 @@ cidr_blocks = ["0.0.0.0/0"]
 }
 
 resource "aws_instance" "pipline-ec2" {
-ami = "ami-013e72d4d2950004e"
+ami = "ami-020cba7c55df1f615"
 instance_type = "t3.medium"
 vpc_security_group_ids = [aws_security_group.my_server1.id]
 key_name = "key.pam"
