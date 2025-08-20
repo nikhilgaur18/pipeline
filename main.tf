@@ -36,7 +36,7 @@ vpc_security_group_ids = [aws_security_group.my_server13.id]
 key_name = "key"
 }
 
-resource "aws_instance" "pipline-ec23" {
+resource "aws_instance" "pipline-ec24" {
 ami = "ami-020cba7c55df1f615"
 instance_type = "t2.small"
 vpc_security_group_ids = [aws_security_group.my_server13.id]
